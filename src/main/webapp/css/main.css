@@ -1,0 +1,142 @@
+nav {
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+nav .nav-user {
+    font-size: 1rem;
+    height: 100%;
+    border-radius: 0;
+    border: none;
+    padding: 8px 12px;
+    position: relative;
+}
+
+nav .user:hover .user-option {
+    display: block;
+}
+
+nav .user-option {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    font-size: 0.8rem;
+    width: 150px;
+    border: 1px solid #ccc;
+    display: none;
+    z-index: 1;
+}
+
+nav .user-option .user-profile,
+nav .user-option .logout {
+    width: 100%;
+    border-radius: 0;
+    text-align: left;
+    padding-left: 14px;
+}
+
+
+/* Menu */
+
+#menu {
+    height: 100vh;
+    border-right: 1px ;
+}
+
+#search-input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#search-btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.main #menu ul li {
+    border-radius: 0;
+    
+}
+
+
+/* Edit Profile */
+
+.wrapper-edit-profile {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 1px gray;
+    /* display: none; */
+}
+
+.wrapper-edit-profile p {
+    font-size: 1rem;
+    font-weight: 400;
+    border-bottom: 1px solid #ccc;
+}
+
+.wrapper-edit-profile form {
+    width: 80%;
+}
+
+.wrapper-edit-profile form label {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+/* Form content */
+
+/* .wrapper-form-content {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 1px gray;
+} */
+
+.wrapper-form-content p {
+    font-size: 1rem;
+    font-weight: 400;
+    border-bottom: 1px solid #ccc;
+}
+
+.wrapper-form-content form {
+    width: 80%;
+}
+
+.wrapper-form-content form label {
+    font-size: 1.2rem;
+    
+}
+
+
+/* View content */
+
+/* .wrapper-view-content {
+    border: 1px solid #ccc;
+    box-shadow: 0 0 1px gray;
+} */
+
+.wrapper-view-content p {
+    font-size: 1rem;
+    font-weight: 400;
+    border-bottom: 1px solid;
+}
+
+.wrapper-view-content table td {
+    padding: 8px 10px;
+    font-size: 1rem;
+}
+
+.wrapper-view-content table thead td {
+    font-weight: 500;
+}
+
+.wrapper-view-content table td:last-child {
+    width: 120px;
+}
+
+
+/* Loading */
+
+#loading {
+    margin: 50px;
+    display: none;
+    font-size: 2.2rem;
+}

@@ -1,0 +1,37 @@
+CREATE DATABASE DemoMVC
+GO
+
+USE DemoMVC
+GO
+
+CREATE TABLE [dbo].[Book](
+	[Book_ID] [int] IDENTITY(1,1) NOT NULL,
+	[Title] [nvarchar](50) NOT NULL,
+	[Page_Count] [int] NOT NULL,
+	[Date_published] [date] NOT NULL,
+	[Price] [money] NOT NULL,
+	[Status] [bit] NOT NULL,
+	[Author_Id] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Book_ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Book]  WITH CHECK ADD FOREIGN KEY([Author_Id])
+REFERENCES [dbo].[Author] ([Author_Id])
+GO
+
+ALTER TABLE [dbo].[Book]  WITH CHECK ADD CHECK  (([Date_published]<getdate()))
+GO
+
+CREATE TABLE [dbo].[Author](
+	[Author_Id] [int] IDENTITY(1,1) NOT NULL,
+	[Author_Name] [nvarchar](50) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Author_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
